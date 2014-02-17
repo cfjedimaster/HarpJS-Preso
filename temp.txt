@@ -1,0 +1,109 @@
+Outline
+
+Who am I
+What is Harp?
+	An OS Application and a Platform (hosting)
+	Static web server with built in preprocessing
+	
+What is a web server?
+	Serves up files (hopefully you already know this)
+
+Why would I use another web server?
+	Preprocessing (and other magic) on top
+	
+What is preprocessing?
+
+	Things that let you write CSS, JS, HTML without writing CSS, JS, or HTML (ok, not exactly)
+
+What Harp supports:
+
+CSS: Less, Sass, or Stylus (or CSS!)
+JS: CoffeeScript (or JS!)
+HTML: Markdown, Jade, EJS (or HTML!)
+You can use any mix of these!
+
+Installing Harp
+	You need Node (to get npm only)
+	sudo npm install -g harp (osx)
+	npm install -g harp (windows)
+	
+Creating a Harp app
+	Any folder with an index.html (or .jade, .md, .ejs)
+	harp init projectname
+	
+Starting a Harp Server
+	harp server
+	
+Demo
+
+Preprocessing in action
+	Automatic based on extension
+	You can still link to the 'real' extension
+
+Compiling
+	Just means outputting to HTML
+	harp compile 
+	
+Demo
+
+Harp Conventions
+	Everything in the folder is available, like a web site
+	Or you can make a public folder and include a harp.json file
+	Finally, files with _ in front aren't served
+	
+Demo (show demo2)
+
+Going Dynamic
+
+	Both Jade and EJS allow you to embed script into the template itself.
+	This is run at the server, by Harp, not client side.
+	EJS - http://embeddedjs.com/
+	
+EJS
+	Uses <% ... %> for code
+	Uses <%= %> to output text
+	Uses <%- %> for html
+	
+Demo
+
+Layout
+	Named _layout.EXT (ejs, jade)
+	Automatic
+	Possible to select/out opt
+	
+Demo (demo4)
+
+Working with Data
+	Globals
+	Metadata
+	Current
+	
+Globals are Global
+Live in harp.json
+Show example on slide
+
+Demo (demo5)
+
+Metadata
+	Named _data.json
+	Per directory (relate to a directory)
+	Available to your code as public.X._data
+	
+Demo (demo6)
+
+Current
+	Data about where you are now
+	Useful for layout, pagination, etc
+	
+Demo (demo7)
+
+Bonus
+	Environment
+	Basic Auth
+
+Harp Platform (harp.io)
+
+Find Out More (links)
+
+maybe: case studies - cf cookbook, what the thunder said
+

@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Using Harp to Simplify Life</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		
+		<style>
+		.transparent {
+			border: none !important;
+		}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Using HarpJS to Simplify Life</h1>
+					<h3>Because simple is good (like kittens)</h3>
+					<p>
+						<small>By <a href="http://www.raymondcamden.com">Raymond Camden</a> / <a href="http://twitter.com/cfjedimaster">@cfjedimaster</a></small>
+					</p>
+				</section>
+
+				<section>					
+					<h2>Who am I?</h2>
+					<ul style="float:left;width:60%">
+						<li>Developer for Adobe</li>
+						<li>Web Standards, HTML5, JavaScript, Mobile, ColdFusion</li>
+						<li>Blogging at www.raymondcamden.com</li>
+						<li>Tweeting at cfjedimaster</li>
+					</ul>
+
+					<img src="img/ray.png" class="transparent">
+				</section>
+				
+				<section>
+					<h2>What is Harp?</h2>
+				</section>
+
+				<section>
+					<p>
+						An open source application (command line tool) as well as a commercial platform for hosting.
+					</p>
+					<p>
+					harpjs.com
+					</p>
+				</section>
+				
+				<section>
+					<p>
+						Harp acts as a <strong>static web server</strong> with loads of <strong>built in preprocessing</strong>.
+					</p>
+				</section>
+
+				<section>
+					<h2>
+					What is a web server?
+					</h2>
+					
+					<p class="fragment">
+						Just serves up files! (Ok, it does a little bit more...)
+					</p>
+				</section>
+
+				<section>
+					<h2>
+					Why would I use another web server?
+					</h2>
+					
+					<p class="fragment">
+						Harp adds preprocessing (and magic, along with kittens) on top!
+					</p>
+				</section>
+				
+				<section>
+					<h2>What is preprocessing?</h2>
+					<p class="fragment">
+					Things that let you write CSS, JavaScript, and HTML without writing CSS, JavaScript, and HTML.
+					</p>
+				</section>
+
+				<section>
+				<h2>What Harp Supports:</h2>
+				<p>
+					CSS: Less, Sass, or Stylus (or plain CSS)<br/>
+					JavaScript: CoffeeScript (or plain JavaScript)<br/>
+					HTML: Markdown, Jade, EJS (or plain HTML)<br/>
+					You can use <strong>any</strong> mix of these!
+				</p>
+				</section>
+
+				<section>
+				<h2>What Harp Supports:</h2>
+				<p>
+					CSS: Less, Sass, or Stylus (or plain <strong style="font-size:110%;text-decoration:underline">CSS</strong>)<br/>
+					JavaScript: CoffeeScript (or plain <strong style="font-size:110%;text-decoration:underline">JavaScript</strong>)<br/>
+					HTML: <strong style="font-size:110%;text-decoration:underline">Markdown</strong>, Jade, <strong style="font-size:110%;text-decoration:underline">EJS</strong> (or plain <strong style="font-size:110%;text-decoration:underline">HTML</strong>)<br/>
+				</p>
+				</section>
+
+				<section>
+				<h2>Installing Harp</h2>
+					<p>Mac</p>
+					<pre><code data-trim contenteditable>
+sudo npm install -g harp
+					</code></pre>
+					<p>Windows</p>
+					<pre><code data-trim contenteditable>
+npm install -g harp
+					</code></pre>
+				</section>
+				
+				<section>
+					<h2>Creating a Harp app - Option One</h2>
+					<p>
+					Just pick a folder with an index.html file!
+					</p>
+				</section>
+				
+				<section>
+					<h2>Creating a Harp app - Option Two</h2>
+					<pre><code data-trim contenteditable>
+harp init projectname
+					</code></pre>
+				</section>
+				
+				<section>
+					<h2>Starting a Harp app</h2>
+					<pre><code data-trim contenteditable>
+harp server
+					</code></pre>
+				</section>
+				
+				<section>
+					<h1>Demo</h1>
+					<!-- show demo 1 -->
+				</section>
+
+				<section>
+					<h2>Preprocessing in Harp</h2>
+					<p>
+					All based on extension, all automatic, and you can (should) link to the 'output' version.
+					</p>
+				</section>
+				
+				<section>
+					<h2>Compiling</h2>
+					<p class="fragment">
+					All this means is outputting to HTML.
+					</p>
+				</section>
+				
+				<section>
+					<pre><code data-trim contenteditable>
+harp compile src output
+					</code></pre>
+				
+				</section>
+				
+				<section>
+					<h1 title="show harp compiling demo1">Demo</h1>
+				</section>
+
+				<section>
+					<h1>Harp Conventions</h1>
+				</section>
+				
+				<section>
+					<p>
+					By default, everything in the folder is available, like a regular web server.
+					</p>					
+				</section>
+				
+				<section>
+					<p>
+					You can also create a "public" folder, include a harp.json file, and only public files will be served.
+					</p>
+					<img src="img/framework.png">
+				</section>
+				
+				<section>
+					<p>
+					Anything with a _ in front of the file name is protected as well.
+					</p>
+				</section>
+				
+				<section>
+					<h1 title="demo 2">Demo</h1>
+				</section>
+				
+				<section>
+					<h2>Going Dynamic</h2>
+					<p>Both Jade and EJS allow for embedded scripts - run on the server, by Harp, not on the client.</p>
+					<p class="fragment">
+					My preference: EJS (www.embeddedjs.com)
+					</p>
+				</section>
+				
+				<section>
+				<h2>Examples</h2>
+					<p>
+					Uses &lt;% ... %&gt; for code<br/>
+					Uses &lt;%= ... %&gt; to output dynamic text<br/>
+					Uses &lt;%- ... %&gt; to output dynamic html<br/>
+					</p>
+				</section>
+				
+				<section>
+					<h1 title="demo 3">Demo</h1>
+				</section>
+				
+				<section>
+					<h2>Layouts</h2>
+					<p>
+					Named as _layout.ext where ext is ejs or jade (or ejs)
+					</p>
+				</section>
+				
+				<section>
+					<h1 title="demo4">Demo</h1>
+				</section>
+
+				<section>
+					<h2>Partials</h2>
+					<p>
+					Fancy way of saying includes.
+					</p>
+				</section>
+
+				<section>
+					<h2>EJS Example</h2>
+					<pre><code data-trim contenteditable>
+<%- partial("_legalbs") %>
+					</code></pre>
+				
+				</section>
+	
+				<section>
+					<h1 title="demo5">Demo</h1>
+				</section>
+					
+				<section>
+					<h2>Working with Data</h2>	
+				</section>
+					
+				<section>
+					<h2>Globals</h2>	
+					<p>
+					Lives in harp.json and is available everywhere. That's it.
+					</p>
+					<pre><code data-trim contenteditable>
+{
+	"globals":{
+	}
+}
+					</code></pre>
+					
+				</section>
+					
+				<section>
+					<h1 title="demo6">Demo</h1>
+				</section>
+					
+				<section>
+					<h2>Metadata</h2>	
+					<p>
+					Stored in _data.json, one per subdirectory, and available
+					to your code as public.{foldername}._data.
+					</p>
+				</section>
+					
+				<section>
+					<h2>Why?</h2>	
+				</section>
+					
+				<section>
+					<h1 title="demo7">Demo</h1>	
+				</section>
+					
+				<section>
+					<h2>Current</h2>	
+					<p>
+					Object containing information about your current request (typically used for navigation UI).
+					</p>
+				</section>
+					
+				<section>
+					<h2>Example</h2>
+					<p>
+					Request for /articles/beer
+					</p>
+					<pre><code data-trim contenteditable>
+{
+	path: ["articles","beer"],
+	source: "beer"
+}
+					</code></pre>
+					
+				</section>
+
+				<section>
+					<h1 title="demo8">Demo</h1>	
+				</section>
+
+				<section>
+					<h2>But wait - there's more!</h2>	
+					<ul>
+					<li class="fragment">Multihost</li>
+					<li class="fragment">Inside another Node app</li>
+					<li class="fragment">Basic Auth</li>
+					</ul>
+				</section>
+					
+				<section>
+					<h2>Debugging Tips</h2>	
+					<ul>
+					<li class="fragment">Use compile as a way to find errors</li>
+					<li class="fragment">JSON.stringify(foo)</li>
+					<li class="fragment">console.log(...)</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h1>Real World Example</h1>	
+				</section>
+				
+				<section>
+					<h2>Harp Platform</h2>
+					<p>
+					harp.io
+					</p>
+				</section>
+					
+				<section>
+					<h2>Pricing</h2>
+					<img src="img/pricing.png">
+				</section>
+					
+				<section>
+					<h2>Example</h2>	
+				</section>
+					
+				<!--
+Harp Platform (harp.io)
+Find Out More (links)
+maybe: case studies - cf cookbook, what the thunder said
+-->
+				<section>
+					<h1>THE END</h1>
+					<h3>BY Hakim El Hattab / hakim.se</h3>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: 'beige', // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

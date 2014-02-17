@@ -1,0 +1,18 @@
+<h2>Really Dynamic</h2>
+
+<% for(var i=0; i<10; i++) { %>
+	<b>I like to loop... <%= i %></b><br/>
+<% } %>
+
+<hr/>
+
+<%
+	function helloWorld(s) {
+		return "Hello, "+s;
+	}
+
+%>
+
+<%- helloWorld("World") %>
+
+	
