@@ -1,6 +1,6 @@
 {
 	"globals":{
-		"name":"My Cool Site",
+		"title":"My Cool Site",
 		"version":"Beta (of course)"
 	}
 }
