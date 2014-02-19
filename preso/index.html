@@ -73,8 +73,9 @@
 					<p>
 						An open source application (command line tool) as well as a commercial platform for hosting.
 					</p>
+					<br/><br/>
 					<p>
-					harpjs.com
+					Site: harpjs.com
 					</p>
 				</section>
 				
@@ -100,7 +101,8 @@
 					</h2>
 					
 					<p class="fragment">
-						Harp adds preprocessing (and magic, along with kittens) on top!
+						Harp gives you the power of a dynamic application server
+						with the simplicity of a simple static site.
 					</p>
 				</section>
 				
@@ -140,6 +142,9 @@ sudo npm install -g harp
 					<pre><code data-trim contenteditable>
 npm install -g harp
 					</code></pre>
+					<p>
+					npm comes with Node.js and no, you don't need to know Node!
+					</p>
 				</section>
 				
 				<section>
@@ -280,9 +285,11 @@ harp compile src output
 					<p>
 					Lives in harp.json and is available everywhere. That's it.
 					</p>
+					<img src="img/globals.png">
 					<pre><code data-trim contenteditable>
 {
-	"globals":{
+	"globals": {
+		"something":"Some Value"
 	}
 }
 					</code></pre>
@@ -294,8 +301,12 @@ harp compile src output
 				</section>
 					
 				<section>
-					<h2>Metadata</h2>	
+					<h2>Metadata</h2>
 					<p>
+						Allows you to create lists of data (think blog titles, products, etc) that you can work with.
+					</p>
+					
+					<p class="fragment">
 					Stored in _data.json, one per subdirectory, and available
 					to your code as public.{foldername}._data.
 					</p>
